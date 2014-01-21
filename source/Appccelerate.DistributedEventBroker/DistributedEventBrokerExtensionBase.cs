@@ -311,7 +311,7 @@ namespace Appccelerate.DistributedEventBroker
 
             var eventArgs = this.Serializer.Deserialize(eventArgsType, eventFired.EventArgs);
 
-            this.HostedEventBroker.Fire(eventFired.Topic, this, eventFired.HandlerRestriction, this, eventArgs);
+            this.HostedEventBroker.Fire(eventFired.Topic, new Publisher(), eventFired.HandlerRestriction, this, eventArgs);
         }
 
         /// <summary>
@@ -366,6 +366,10 @@ namespace Appccelerate.DistributedEventBroker
         private void HandleEvent(object sender, EventArgs<IEventFired> e)
         {
             this.HandleMessage(sender, e.Value);
+        }
+
+        public class Publisher
+        {
         }
     }
 }

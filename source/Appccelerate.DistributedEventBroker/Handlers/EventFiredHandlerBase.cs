@@ -67,7 +67,7 @@ namespace Appccelerate.DistributedEventBroker.Handlers
         {
             string topic = this.CreateTopic(message);
 
-            this.EventBroker.Fire(topic, this, this.Restriction, this, new EventArgs<IEventFired>(message));
+            this.EventBroker.Fire(topic, new EventFiredHandlerBasePublisher(), this.Restriction, this, new EventArgs<IEventFired>(message));
         }
 
         /// <summary>
@@ -80,6 +80,10 @@ namespace Appccelerate.DistributedEventBroker.Handlers
             Ensure.ArgumentNotNull(message, "message");
 
             return string.Format(CultureInfo.InvariantCulture, Constants.InternalTopicFormat, message.DistributedEventBrokerIdentification);
+        }
+
+        public class EventFiredHandlerBasePublisher
+        {
         }
     }
 }
