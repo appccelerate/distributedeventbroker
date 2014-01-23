@@ -329,7 +329,12 @@ namespace Appccelerate.DistributedEventBroker
 
             this.testee.TestHandleMessage(eventFired.Object);
 
-            this.eventBroker.Verify(eb => eb.Fire(ExpectedTopic, this.testee, HandlerRestriction, this.testee, cancelEventArgs));
+            this.eventBroker.Verify(eb => eb.Fire(
+                ExpectedTopic, 
+                It.IsAny<DistributedEventBrokerExtensionBase.Publisher>(),
+                HandlerRestriction, 
+                this.testee, 
+                cancelEventArgs));
         }
 
         [Fact]

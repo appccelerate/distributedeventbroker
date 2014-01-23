@@ -50,7 +50,12 @@ namespace Appccelerate.DistributedEventBroker.Handlers
 
             this.testee.TestDoHandle(message);
 
-            A.CallTo(() => this.eventBroker.Fire("topic://Appccelerate.DistributedEventBroker/DISTRIBUTED", this.testee, HandlerRestriction.Asynchronous, this.testee, A<EventArgs<IEventFired>>.Ignored)).MustHaveHappened();
+            A.CallTo(() => this.eventBroker.Fire(
+                "topic://Appccelerate.DistributedEventBroker/DISTRIBUTED", 
+                A<EventFiredHandlerBase.Publisher>._, 
+                HandlerRestriction.Asynchronous, 
+                this.testee, 
+                A<EventArgs<IEventFired>>.Ignored)).MustHaveHappened();
         }
 
         [Fact]
