@@ -1,6 +1,6 @@
 //-------------------------------------------------------------------------------
 // <copyright file="DistributedEventBrokerExtensionBase.cs" company="Appccelerate">
-//   Copyright (c) 2008-2013
+//   Copyright (c) 2008-2014
 //
 //   Licensed under the Apache License, Version 2.0 (the "License");
 //   you may not use this file except in compliance with the License.
@@ -72,9 +72,9 @@ namespace Appccelerate.DistributedEventBroker
         }
 
         /// <summary>
-        /// Gets the internal event registerer which is the <see cref="InternalEventBrokerHolder.InternalEventBroker"/> casted to <see cref="IEventRegistrar"/>.
+        /// Gets the internal event registrar which is the <see cref="InternalEventBrokerHolder.InternalEventBroker"/> casted to <see cref="IEventRegistrar"/>.
         /// </summary>
-        /// <value>The internal event registerer.</value>
+        /// <value>The internal event registrar.</value>
         protected virtual IEventRegistrar EventRegistrar
         {
             get { return (IEventRegistrar)InternalEventBrokerHolder.InternalEventBroker.SpecialCasesRegistrar; }

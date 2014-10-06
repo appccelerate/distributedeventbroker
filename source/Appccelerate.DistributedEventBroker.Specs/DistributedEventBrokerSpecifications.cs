@@ -1,6 +1,6 @@
 ﻿//-------------------------------------------------------------------------------
 // <copyright file="DistributedEventBrokerSpecifications.cs" company="Appccelerate">
-//   Copyright (c) 2008-2013
+//   Copyright (c) 2008-2014
 //
 //   Licensed under the Apache License, Version 2.0 (the "License");
 //   you may not use this file except in compliance with the License.
@@ -153,7 +153,7 @@ namespace Appccelerate.DistributedEventBroker
         }
     }
 
-    public class when_event_published : DistributedEventBrokerSpecifications
+    public class When_event_published : DistributedEventBrokerSpecifications
     {
         private static LocalSubscriberAndPublisher localSubscriberAndPublisher;
 

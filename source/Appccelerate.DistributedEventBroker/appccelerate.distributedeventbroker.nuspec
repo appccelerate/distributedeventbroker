@@ -15,7 +15,6 @@
       With this extension, the event broker can be used to fire events to event brokers in remote processes.
     </description>
     <releaseNotes>
-        3.1: built using new build infrastructure (no functional changes)
         3: targets now .Net 4.5
     </releaseNotes>
     <copyright>Copyright 2012-2014</copyright>
@@ -32,9 +31,9 @@
     </dependencies>	
   </metadata>
   <files>
-    <file src="Appccelerate.DistributedEventBroker\bin\Release\Appccelerate.DistributedEventBroker.dll" target="lib\net45" />
-    <file src="Appccelerate.DistributedEventBroker\bin\Release\Appccelerate.DistributedEventBroker.pdb" target="lib\net45" />
-    <file src="Appccelerate.DistributedEventBroker\bin\Release\Appccelerate.DistributedEventBroker.xml" target="lib\net45" />
-    <file src="Appccelerate.DistributedEventBroker\**\*.cs" target="src" />
+    <file src="bin\Release\Appccelerate.DistributedEventBroker.dll" target="lib\net45" />
+    <file src="bin\Release\Appccelerate.DistributedEventBroker.pdb" target="lib\net45" />
+    <file src="bin\Release\Appccelerate.DistributedEventBroker.xml" target="lib\net45" />
+    <file src="**\*.cs" target="src" />
   </files>  
 </package>
